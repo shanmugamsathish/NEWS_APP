@@ -1,0 +1,32 @@
+<h1 class="heading">SHAN NEWS</h1>
+<section>
+    <!-- <div class="example-label">Basic</div> -->
+    <div class="example-button-row">
+      <button mat-button>Basic</button>
+      <button mat-button color="primary">HOME</button>
+      <button mat-button color="primary">ABOUT</button>
+      <button mat-button color="primary">SERVICES</button>
+      <button mat-button disabled>Disabled</button>
+      <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+<h2>{{title}}</h2>
+<div class="container">
+    <div class="card-container" >
+        <div class="card"  *ngFor="let x of newsdata" style="width:18rem">
+
+            <img [src]="x.urlToImage" class="card-img-top" alt="...">
+            <h6 style="text-align: center; font-weight: 350;">{{x.publishedAt  | date:'medium'}}</h6>
+            <div class="card-body">
+                <h3 class="card-title"> <b>{{x.title}}</b></h3>
+                <p class="card-text">{{x.description}}</p>
+                <a href="{{x.url}}" class="btn btn-primary">Read More</a>
+              <p class="card-text"></p>
+            </div>
+
+        </div>
+    
+    </div>
+    
+</div>
+
